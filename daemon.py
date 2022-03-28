@@ -12,10 +12,11 @@ def run():
 
 
 def daemon():
-    schedule.every().day.at("9").do(run)
+    schedule.every().day.at("09:00").do(run)
     while True:
         time.sleep(60)
 
 
 if __name__ == '__main__':
+    print("Daemon running.")
     daemon()
